@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+	Author: Naomi Catwell
+	Title: hangman.html
+	Date: January 8 - 11, 2018
+-->
+	<script src="js/hangman_script.js" type="text/javascript" ></script>	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+<style>
+#letterGuess {
+	width: 8em;
+	font-size: 3em;
+	margin: 0.1em;
+	text-align: center;
+}
+
+u {
+	border-bottom: 0.001em solid black;
+}
+td {
+	height: 1.2em;
+	font-size: 2em;
+	width: 0.8em;
+	text-align: center;
+	
+}
+.block {
+	float: left;
+	margin: 5px;
+}
+#vol_img {
+	margin-right: 5px;
+}
+</style>
+</head>
+<body onload="chooseWord()">
+	<div class="block">
+		<div id="messageBox"></div>
+		<div id="guessBox">
+			<div id="guessedSoFar"></div>
+			<h2>Guess a letter: </h2>
+			<input id="letterGuess" type="text" onkeypress="checkKey(event)" /><br/>
+			<input class= "btn btn-success" type="button" value="Submit guess" onclick="validateGuess()" />
+			<input class= "btn btn-info" type="button" value="New game" onclick="chooseWord()" /><br/>
+			<span id="vol_img" class="fa fa-volume-up"></span>
+			<input id="volume" type="range" min="0" max="10" value="10" onchange="changeVolume()" >
+		</div>
+	</div>
+	<div class="block">
+		<div><b>Letters guessed so far: </b><span id="lettersGuessed"></span></div>
+		<div>You've won <span id="streak">0</span> games so far.</div>
+		<img id="hangmanImage" src="images/hang0.png" alt="hangman"/>
+	</div>
+	
+	
+	<script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
+	<script src="js/popper.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>  
+</body>
+</html>
