@@ -2,6 +2,6 @@
 
 A web-based hangman game
 
-Accessible [here](https://naomi-rc.github.io/hangman/)!
+See a live demo [here](https://naomi-rc.github.io/hangman/)!
 
 ![Hangman](./images/demo_image.png)
